@@ -1,6 +1,6 @@
 (part1, part2) = (sum . fmap p1 <$> inp, sum . fmap p2 <$> inp)
   where
-    inp = fmap words . lines <$> readFile "day1/input.txt"
+    inp = fmap words . lines <$> readFile "day2/input.txt"
     p1 xs = case (head xs, xs !! 1) of
       ("A", "X") -> 4 -- Rock, Rock
       ("B", "Y") -> 5 -- Paper, Paper
