@@ -2,13 +2,12 @@ with open('input.txt', 'r') as file:
     calories = file.read().rstrip()
 
 calories = calories.split('\n')
-calories = [0 if val == '' else val for val in calories]
-calories = [int(val) for val in calories]
+calories = ['' if val == '' else int(val) for val in calories]
 
 elf_list = []
 elf_sub_list = []
 for val in calories:
-    if val != 0:
+    if val != '':
         elf_sub_list.append(val)
     else:
         elf_list.append(elf_sub_list)
